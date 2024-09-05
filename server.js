@@ -27,6 +27,10 @@ const generationConfig = {
 app.use(cors());  // Use CORS middleware
 app.use(express.json());
 
+app.get('/',(req, res)=>{
+  res.send("Server running")
+})
+
 app.post('/query-server', async (req, res) => {
     const query = req.body.query;
     try {
